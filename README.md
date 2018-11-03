@@ -3,7 +3,8 @@ NBA Forecasting
 
 <center>
 
-![Project Cover](nbapic.png:large)
+![Project](https://github.com/nkasmanoff/NBA-Predictions/blob/master/nbapic.png)
+
 
 </center>
 
