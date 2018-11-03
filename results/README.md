@@ -1,0 +1,1 @@
+Contained in this repo are some of the graphs I've already generated, for a more descriptive study into what each of them means, please look at the other listed folders which also have them, and discuss their meaning. 
