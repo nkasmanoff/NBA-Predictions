@@ -23,3 +23,11 @@ TensorFlow Debugging
 Initially, I kept receiving test and training accuracies of 1, a clearly bad sign demonstrating this data was fitting the data perfectly. A trend I know is too good to be true. In the end, I noticed that I failed to remove the label from the features section of the dataset, meaning there was a 1 to 1 sort of matching going on that was very easy for a model to key in on. On the tensorboard graph below, the way this is displayed is with the loss curves immediately dropping to zero. After I resolved this issue, I found testing accuracies far more realistic in 65%, and this graph is also overalayed. Tensorboard is helpful!
 
 
+
+<center>
+
+![Project](https://github.com/nkasmanoff/NBA-Predictions/blob/master/model/lossgraph.png)
+
+
+</center>
+
