@@ -26,7 +26,7 @@ Initially, I kept receiving test and training accuracies of 1, a clearly bad sig
 
 <center>
 
-![Project](https://github.com/nkasmanoff/NBA-Predictions/blob/master/model/lossgraph.png)
+![Project](https://github.com/nkasmanoff/NBA-Predictions/blob/master/models/lossgraph.png)
 
 
 </center>
