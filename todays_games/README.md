@@ -14,3 +14,4 @@ Update
 So while it is possible to scrape the rolling statistics of these teams and their matchups, it is not possible to acquire the spreads of these games the day of via oddshark.com. As a result, a different source for these values must be attained elsewhere, and is the current focus of my search. 
 
 
+ta
