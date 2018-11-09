@@ -144,6 +144,13 @@ def scrape_espn_for_today_spreads(todays_dataframe):
                             team = 'NYK'
                         if team == 'GS:':
                             team = 'GSW'
+                    else:
+                        if team == 'WSH':
+                            team = 'WAS'
+                        if team  == 'UTAH':
+                            team = 'UTA'
+                        if team == 'BKN':
+                            team = 'BRK'
                     #print(team)
 
                     break

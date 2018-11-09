@@ -16,3 +16,41 @@ Game: MIL @ GSW
 Predicted Winner: GSW
 Home Team Spread: GSW-5.5
 Approximate Moneyline Odds: MIL192.937306295 GSW-216.869715555
+
+Winners from 11/8/2018
+OKC
+BOS
+POR
+MIL
+
+
+11/9/2018
+----------
+Game: WAS @ ORL
+Predicted Winner: WAS
+Home Team Spread: ORL3.0
+Approximate Moneyline Odds: WAS-153.58834208 ORL133.57843132
+Game: CHA @ PHI
+Predicted Winner: PHI
+Home Team Spread: PHI-6.0
+Approximate Moneyline Odds: CHA210.97213597 PHI-250.45742957
+Game: DET @ ATL
+Predicted Winner: DET
+Home Team Spread: ATL5.0
+Approximate Moneyline Odds: DET-191.97324296 ATL178.62177486
+Game: IND @ MIA
+Predicted Winner: MIA
+Home Team Spread: MIA-1.0
+Approximate Moneyline Odds: IND-103.18447304 MIA-151.41760512
+Game: BRK @ DEN
+Predicted Winner: DEN
+Home Team Spread: DEN-10.0
+Approximate Moneyline Odds: BRK638.99071121 DEN-986.31238101
+Game: BOS @ UTA
+Predicted Winner: UTA
+Home Team Spread: UTA-5.0
+Approximate Moneyline Odds: BOS178.62177486 UTA-191.97324296
+Game: MIN @ SAC
+Predicted Winner: MIN
+Home Team Spread: SAC3.5
+Approximate Moneyline Odds: MIN-156.575561345 SAC145.503869895
