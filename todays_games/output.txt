@@ -1,0 +1,18 @@
+11/8/2018
+----------
+Game: HOU @ OKC
+Predicted Winner: HOU
+Home Team Spread: OKC5.0  
+Approximate Moneyline Odds: HOU-191.97324296 OKC178.62177486
+Game: BOS @ PHX
+Predicted Winner: BOS
+Home Team Spread: PHX9.5
+Approximate Moneyline Odds: BOS-836.914171175 PHX546.247935255
+Game: LAC @ POR
+Predicted Winner: POR
+Home Team Spread: POR-5.0
+Approximate Moneyline Odds: LAC178.62177486 POR-191.97324296
+Game: MIL @ GSW
+Predicted Winner: GSW
+Home Team Spread: GSW-5.5
+Approximate Moneyline Odds: MIL192.937306295 GSW-216.869715555
