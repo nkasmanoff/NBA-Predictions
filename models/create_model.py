@@ -30,7 +30,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import accuracy_score
 
 #Split all into training and testing
-X_train,X_test,y_train,y_test = train_test_split(X,y,shuffle=False,test_size = .1)
+X_train,X_test,y_train,y_test = train_test_split(X,y,shuffle=True,test_size = .3)
 
 #prior to normalization, I want to retrieve a list of all of the spreads of the testing data. 
 #This will be used further down the pipeline for converting to moneyline odds. 
@@ -58,7 +58,7 @@ model = MLPClassifier()
 model.fit(X_train,y_train)
 
 
-cvs = cross_val_score(model,X_test,y_test,cv=10)
+cvs = cross_val_score(model,X_test,y_test,cv=5)
 
 print("Model Accuracy: ", 100*np.mean(cvs), "% +/- " , 100 * 2*np.std(cvs), "%. ")
 

@@ -54,3 +54,55 @@ Game: MIN @ SAC
 Predicted Winner: MIN
 Home Team Spread: SAC3.5
 Approximate Moneyline Odds: MIN-156.575561345 SAC145.503869895
+
+Winners from 11/9/2018
+ORL
+PHI
+DET
+IND
+BKN
+UTA
+SAC
+
+11/10/2018
+----------
+Game: NYK @ TOR
+Predicted Winner: TOR
+Home Team Spread: TOR-14.0
+Approximate Moneyline Odds: NYK2024.30133957 TOR-3018.89581469
+Game: MIL @ LAC
+Predicted Winner: MIL
+Home Team Spread: LAC4.0
+Approximate Moneyline Odds: MIL-163.11173709 LAC156.15376667
+Game: PHX @ NOP
+Predicted Winner: NOP
+Home Team Spread: NOP-9.5
+Approximate Moneyline Odds: PHX546.247935255 NOP-836.914171175
+Game: WAS @ MIA
+Predicted Winner: MIA
+Home Team Spread: MIA-3.0
+Approximate Moneyline Odds: WAS133.57843132 MIA-153.58834208
+Game: CLE @ CHI
+Predicted Winner: CHI
+Home Team Spread: CHI-5.0
+Approximate Moneyline Odds: CLE178.62177486 CHI-191.97324296
+Game: PHI @ MEM
+Predicted Winner: MEM
+Home Team Spread: MEM-4.0
+Approximate Moneyline Odds: PHI156.15376667 MEM-163.11173709
+Game: HOU @ SAS
+Predicted Winner: HOU
+Home Team Spread: SAS2.5
+Approximate Moneyline Odds: HOU-152.86450806 SAS119.128740935
+Game: BRK @ GSW
+Predicted Winner: GSW
+Home Team Spread: GSW-7.5
+Approximate Moneyline Odds: BRK299.879514535 GSW-416.223732485
+Game: OKC @ DAL
+Predicted Winner: OKC
+Home Team Spread: DAL1.0
+Approximate Moneyline Odds: OKC-151.41760512 DAL-103.18447304
+Game: LAL @ SAC
+Predicted Winner: LAL
+Home Team Spread: SAC5.5
+Approximate Moneyline Odds: LAL-216.869715555 SAC192.937306295
