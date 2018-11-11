@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('../splits_optimizer/model_ready_data.csv')
+df = pd.read_csv('../splits_optimizer/n=20model_ready_data.csv')
 
 
 outcome = df['PLUS_MINUS'] #df['home_SPREAD'] + df['PLUS_MINUS'] 
