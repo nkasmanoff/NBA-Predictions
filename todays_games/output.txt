@@ -1,108 +1,42 @@
-11/8/2018
+12/5/2018
 ----------
-Game: HOU @ OKC
-Predicted Winner: HOU
-Home Team Spread: OKC5.0  
-Approximate Moneyline Odds: HOU-191.97324296 OKC178.62177486
-Game: BOS @ PHX
-Predicted Winner: BOS
-Home Team Spread: PHX9.5
-Approximate Moneyline Odds: BOS-836.914171175 PHX546.247935255
-Game: LAC @ POR
-Predicted Winner: POR
-Home Team Spread: POR-5.0
-Approximate Moneyline Odds: LAC178.62177486 POR-191.97324296
-Game: MIL @ GSW
+Game: GSW @ CLE
 Predicted Winner: GSW
-Home Team Spread: GSW-5.5
-Approximate Moneyline Odds: MIL192.937306295 GSW-216.869715555
-
-Winners from 11/8/2018
-OKC
-BOS
-POR
-MIL
-
-
-11/9/2018
-----------
-Game: WAS @ ORL
-Predicted Winner: WAS
-Home Team Spread: ORL3.0
-Approximate Moneyline Odds: WAS-153.58834208 ORL133.57843132
-Game: CHA @ PHI
-Predicted Winner: PHI
-Home Team Spread: PHI-6.0
-Approximate Moneyline Odds: CHA210.97213597 PHI-250.45742957
-Game: DET @ ATL
-Predicted Winner: DET
-Home Team Spread: ATL5.0
-Approximate Moneyline Odds: DET-191.97324296 ATL178.62177486
-Game: IND @ MIA
-Predicted Winner: MIA
-Home Team Spread: MIA-1.0
-Approximate Moneyline Odds: IND-103.18447304 MIA-151.41760512
-Game: BRK @ DEN
+Home Team Spread: CLE11.5
+Approximate Moneyline Odds: GSW-1561.21759066 CLE1011.96000909
+Game: DEN @ ORL
 Predicted Winner: DEN
-Home Team Spread: DEN-10.0
-Approximate Moneyline Odds: BRK638.99071121 DEN-986.31238101
-Game: BOS @ UTA
-Predicted Winner: UTA
-Home Team Spread: UTA-5.0
-Approximate Moneyline Odds: BOS178.62177486 UTA-191.97324296
-Game: MIN @ SAC
-Predicted Winner: MIN
-Home Team Spread: SAC3.5
-Approximate Moneyline Odds: MIN-156.575561345 SAC145.503869895
-
-Winners from 11/9/2018
-ORL
-PHI
-DET
-IND
-BKN
-UTA
-SAC
-
-11/10/2018
-----------
-Game: NYK @ TOR
-Predicted Winner: TOR
-Home Team Spread: TOR-14.0
-Approximate Moneyline Odds: NYK2024.30133957 TOR-3018.89581469
-Game: MIL @ LAC
-Predicted Winner: MIL
-Home Team Spread: LAC4.0
-Approximate Moneyline Odds: MIL-163.11173709 LAC156.15376667
-Game: PHX @ NOP
-Predicted Winner: NOP
-Home Team Spread: NOP-9.5
-Approximate Moneyline Odds: PHX546.247935255 NOP-836.914171175
-Game: WAS @ MIA
-Predicted Winner: MIA
-Home Team Spread: MIA-3.0
-Approximate Moneyline Odds: WAS133.57843132 MIA-153.58834208
-Game: CLE @ CHI
-Predicted Winner: CHI
-Home Team Spread: CHI-5.0
-Approximate Moneyline Odds: CLE178.62177486 CHI-191.97324296
-Game: PHI @ MEM
-Predicted Winner: MEM
-Home Team Spread: MEM-4.0
-Approximate Moneyline Odds: PHI156.15376667 MEM-163.11173709
-Game: HOU @ SAS
-Predicted Winner: HOU
-Home Team Spread: SAS2.5
-Approximate Moneyline Odds: HOU-152.86450806 SAS119.128740935
-Game: BRK @ GSW
-Predicted Winner: GSW
-Home Team Spread: GSW-7.5
-Approximate Moneyline Odds: BRK299.879514535 GSW-416.223732485
-Game: OKC @ DAL
+Home Team Spread: ORL5.5
+Approximate Moneyline Odds: DEN-216.869715555 ORL192.937306295
+Game: WAS @ ATL
+Predicted Winner: WAS
+Home Team Spread: ATL4.5
+Approximate Moneyline Odds: WAS-174.48244055 ATL166.776831655
+Game: OKC @ BRK
 Predicted Winner: OKC
-Home Team Spread: DAL1.0
-Approximate Moneyline Odds: OKC-151.41760512 DAL-103.18447304
-Game: LAL @ SAC
+Home Team Spread: BRK6.5
+Approximate Moneyline Odds: OKC-294.02195624 BRK233.974973895
+Game: PHI @ TOR
+Predicted Winner: TOR
+Home Team Spread: TOR-6.5
+Approximate Moneyline Odds: PHI233.974973895 TOR-294.02195624
+Game: LAC @ MEM
+Predicted Winner: MEM
+Home Team Spread: MEM-2.0
+Approximate Moneyline Odds: LAC100.90608873 MEM-153.11848805
+Game: DET @ MIL
+Predicted Winner: MIL
+Home Team Spread: MIL-8.5
+Approximate Moneyline Odds: DET400.640608295 MIL-593.75961417
+Game: CHA @ MIN
+Predicted Winner: MIN
+Home Team Spread: MIN-4.5
+Approximate Moneyline Odds: CHA166.776831655 MIN-174.48244055
+Game: DAL @ NOP
+Predicted Winner: NOP
+Home Team Spread: NOP-6.5
+Approximate Moneyline Odds: DAL233.974973895 NOP-294.02195624
+Game: SAS @ LAL
 Predicted Winner: LAL
-Home Team Spread: SAC5.5
-Approximate Moneyline Odds: LAL-216.869715555 SAC192.937306295
+Home Team Spread: LAL-8.5
+Approximate Moneyline Odds: SAS400.640608295 LAL-593.75961417
