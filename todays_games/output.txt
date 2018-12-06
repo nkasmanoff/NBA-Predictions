@@ -40,3 +40,15 @@ Game: SAS @ LAL
 Predicted Winner: LAL
 Home Team Spread: LAL-8.5
 Approximate Moneyline Odds: SAS400.640608295 LAL-593.75961417
+
+Winners from 12/5/2018
+GSW
+DEN
+WAS
+OKC
+TOR
+MEM
+MIL
+MIN
+NOP
+LAL
