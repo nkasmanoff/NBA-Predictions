@@ -24,3 +24,14 @@ This plot shows diminishing returns after 20 or so games. In the end I decided t
 
 
 Furthermore, I also performa a little bit of EDA, and see that by using PCA and TSNE, there does appear to be a split in the data between home team wins and losses. Following this thread, I now move closer towards generating a model...
+
+
+</center>
+
+![Project](https://github.com/nkasmanoff/NBA-Predictions/blob/master/splits_optimizer/20gameTSNE.png)
+
+
+</center>
+
+
+This plot is of the TSNE EDA, and shows a (good enough) separation between winners and losers. Using this motivation, modelling is now done. 
