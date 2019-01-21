@@ -13,7 +13,28 @@ f.write('\n')
 f.write(str(month)+'/'+str(day)+'/'+str(year)+'\n')
 f.write("----------"+'\n')
 f.close()
+
 def get_todays_games():
+    """
+    Get the game's going on today. 
+    
+    Parameters:
+    -----------
+    
+    None
+    
+    
+    Returns 
+    -------
+    
+    matchups : arr
+        array of all the matchups today. Note I skip the first element since it just denotes road, or home which is known
+        now. 
+        
+        
+    
+    """
+    
     
     today = datetime.now()
     day = today.day
@@ -35,16 +56,24 @@ def get_todays_games():
         
         matchups.append([away_team,home_team])
         
-    return matchups
+    return matchups[1:]
 
-
-def create_todays_dataset_p1():
+def create_todays_data():
     """Creates a dataset identical to the one used for the ML modeling. This is done by scraping the ngames averages
     of the teams just listed, along with the spread, and cominbing. 
-    """
+    
+    Returns 
+    -------
+    
+    today_matchups : arr
+        In accordance with the designated format of how these team statistics will be shaped, I did that here. 
+        For further explanation, please refer to the "relevant stats" and "splits_optimizer" repo's which explain why I 
+        use certain values, this function simply puts them in that shape for the games I want to predict. 
     
     
-    """Find teams. 
+    home_teams : arr
+        Array of the home teams. Since I next have to obtain the spread of these games, I'll line them up based on the 
+        name of the home team. 
     """
     today = datetime.now()
     day = today.day
@@ -52,31 +81,38 @@ def create_todays_dataset_p1():
     year = today.year
     
     
-    matchups = get_todays_games()[1:]
+    matchups = get_todays_games()
     
     #matchups
     import numpy as np
     from nba_py import team
     teams = team.TeamList()
     teamids = teams.info()
+    #print('predicting matchups of ', teamids)
+  #  print()
     teamids = teamids[:-15]
+   # print(teamids)
     teamids = teamids[['TEAM_ID','ABBREVIATION']]
     teamids = teamids.rename(index=str, columns={"ABBREVIATION": "Team"})
     teamids = teamids.replace('BKN','BRK')
     teamids = teamids.sort_values('Team')
-
-    todays_dataframe = []
+   # print(teamids)
+    todays_matchups = []
+    home_teams = []
+    road_teams = []
     for matchup in matchups:
+        home_teams.append(matchup[1])
+        road_teams.append(matchup[0])
         game_array = []
         for team_ in matchup:
             TEAM_ID = teamids.loc[teamids['Team'] == team_].values[0,0]
-            #print(team_,TEAM_ID)
+         #   print(team_,TEAM_ID)
         
             TEAM_splits = team.TeamLastNGamesSplits(team_id=TEAM_ID,season='2018-19')
        # print(TEAM_splits.last20())
             df = TEAM_splits.last20()
         
-            #retain (and create) the columns already proven to be statistically correlated to outcome. 
+            #retain (and create) the columns proven to be correlated to outcome. 
             df['AST/TO'] = df['AST']/df['TOV']
 
             df = df[['FGM','FG3M','FTM','DREB','AST','STL',
@@ -86,135 +122,102 @@ def create_todays_dataset_p1():
             game_array.append(df.values)
         
         matchup_array = np.concatenate((game_array[0],game_array[1]),axis=1)
-        todays_dataframe.append(matchup_array)
+        todays_matchups.append(matchup_array)
 
     #quick formating!
-    todays_dataframe = np.array(todays_dataframe)
-    todays_dataframe = todays_dataframe[:,0,:]
-    return todays_dataframe
+    todays_matchups = np.array(todays_matchups)
+    todays_matchups = todays_matchups[:,0,:]
+    return todays_matchups,home_teams,road_teams
 
-def scrape_espn_for_today_spreads(todays_dataframe):
-    """Scrape and clean from ESPN, which has the info of all NBA games today and their lines. 
+#will use this cell to see if I can scrape Fox for a better result than ESPN. 
+
+def scrape_fox():
     """
+    
+    Scrape fox sports website for today's games and spreads. For variations, use average? 
+    
+    Parameters
+    ----------
+    
+    None
+    
+    Returns 
+    -------
+    
+    todays_spreads : dict
+        Dictionary of the home team, and what their line is (road team has the opposite spread)
+    
+    """
+    from numpy import mean
+
+    url = "https://www.foxsports.com/nba/odds"
     from bs4 import BeautifulSoup
-    import pandas as pd
+  #  import pandas as pd
     import urllib
-    matchups = get_todays_games()[1:]
+    from urllib.request import urlopen
 
 
-    url  = "http://www.espn.com/nba/lines/_/date"
-    page = urllib.request.urlopen(url).read()
-    soup = BeautifulSoup(page, "lxml")
-    tables = soup.find_all('table')
-    table_df = pd.DataFrame([])
-    for table in tables:
-        table_df =table_df.append(pd.read_html(str(table)))
 
-    team_that_plays = []
-    spread_of_that_team = []
-    for i, row in enumerate(table_df[1]):
-        if row == 'SPREAD':
-           # print(row)
-            try:
-           #     print(table_df[1][i+1])
-        
-                eh = table_df[1][i+1]
-            except: 
-                eh = table_df[1][i+2]
-          #      print(eh)
+    client = urlopen(url)
+    page_html = client.read()
+    page_soup = BeautifulSoup(page_html,'html.parser')
+    todays_spreads = {}
 
-            sign = eh[0]
-            try:
-                spread, _ = eh[1:6].split('-')
-            except:
-                spread, _ = eh[1:6].split('+')
+    for game in page_soup.find_all('div',class_ = 'wisbb_gameWrapper'):
+        new = game.findAll('div')[3].findAll('table')[0]
+        #class="wisbb_runLinePtsCol"
+       # print(new.findAll(class_='wisbb_teamsCol')[0].text)
+        #print(new.findAll(class_='wisbb_runLinePtsCol')[0].text)
+        road_team = new.findAll(class_='wisbb_teamsCol')[0].text[0:3]
+        home_team = new.findAll(class_='wisbb_teamsCol')[0].text[3:]
+        if home_team == 'BKN':
+            home_team = 'BRK'
+        spreads = new.findAll(class_='wisbb_runLinePtsCol')
 
-       # spread, _ = eh[0:5].split('-')
-       # print(spread)
-           # print(sign + spread)
-            for i, char in enumerate(eh): 
-                team = eh[i:i+3]
-
-                if char.isalpha():
-                    team = eh[i:i+3]
-                    if team[-1].isalpha() == False:
-                        if team == 'SA:':
-                            team = 'SAS'
-                        if team == 'NY:':
-                            team = 'NYK'
-                        if team == 'GS:':
-                            team = 'GSW'
-                    else:
-                        if team == 'WSH':
-                            team = 'WAS'
-                        if team  == 'UTAH':
-                            team = 'UTA'
-                        if team == 'BKN':
-                            team = 'BRK'
-                    #print(team)
-
-                    break
+        home_spreads_floats = []
+        for spread in spreads:
+            #There are multiple books, just average them!
+            home_spreads_floats.append(float(list(spread.children)[-1]))
     
-              #  if eh[i+3].isalpha() == False:
-              #      print(team)
-              #      print("BAD!!")
-               # team = eh[i:i+3]
-             ##   if team =='SA':
-             #       team = 'SAS'
-
-               # break
-                
+        home_spread = mean(home_spreads_floats)
         
         
-       # print("Spread of the game? " , team, sign+spread)
-            team_that_plays.append(team)
-            spread_of_that_team.append(sign+spread)
-            
-    home_spread = []
-   # print("TEAM THAT PLAYS:")
-   # print(team_that_plays)
-    for s,team in enumerate(team_that_plays):
-      #  print(team)
-        for game in matchups:
-            try:
-                ind = game.index(team)
-                if ind == 0:
-                  #  print(team + " is on the road")
-                 #   print("home spread is therefore opposite of ",float(spread_of_that_team[s]))
-                 #  print("home spread is therefore ",-float(spread_of_that_team[s]))
-                    home_spread.append(-float(spread_of_that_team[s]))
+        road_spread = new.findAll(class_='wisbb_teamsCol')[0].text.split
+       # print("Road team: ", road_team)
+       # print("home team " , home_team)
+       # print("home spread ", home_spread)
+        #print("Road spread:", new.findAll(class_='wisbb_runLinePtsCol')[0].text[0:2])
+        todays_spreads[home_team] = home_spread
+#tables = soup.find_all('table')
+    return todays_spreads
 
-                else:
-                 #   print(team + " is at home")
-                    home_spread.append(-float(spread_of_that_team[s]))
+def model_ready_data():
+    """Combine the data acquisition tools already made, and combine into an array capable of being fed into and used
+    for an insight regarding the expected winner of today's games. 
     
-
-            except:
-                pass
-        
-    ready_for_it = []
-    for i in range(len(todays_dataframe)):
-        ready = list(todays_dataframe[i])
-        ready.append(home_spread[i])
-        ready_for_it.append(ready)
-  # todays_dataframe[i] = list(todays_dataframe[i]).append(home_spread[i])
-
-    ready_for_it = np.array(ready_for_it)
     
-    return matchups,ready_for_it
-
-
-
-todays_splits = create_todays_dataset_p1()
-
-
-matchups, data = scrape_espn_for_today_spreads(todays_splits)
-
-
+    Returns
+    -------
+    
+    todays_matchups_with_spreads : arr
+        The input ready format of the game's going on today. 
+        
+    """
+    
+    from numpy import array
+    todays_matchups,home_teams,road_teams = create_todays_data()
+    todays_spreads = scrape_fox()
+    
+    todays_matchups_with_spreads = []
+    for t, m in zip(home_teams, todays_matchups):
+   # print(m.extend((todays_spreads[t])))
+        m = np.append(m,todays_spreads[t])
+        todays_matchups_with_spreads.append(m)# np.append(todays_matchups_with_spreads,m)t
+    todays_matchups_with_spreads = array(todays_matchups_with_spreads)
+    
+    return todays_matchups_with_spreads,home_teams,road_teams
+X,home_teams,road_teams = model_ready_data()
 import pickle 
-
-#print("Loading in models...")
-
 model_path = '../models/finalized_model.sav'
 # load the model from disk
 loaded_model = pickle.load(open(model_path, 'rb'))
@@ -224,19 +227,7 @@ loaded_model = pickle.load(open(model_path, 'rb'))
 scaler_path = '../models/finalized_scaler.sav'
 loaded_scaler = pickle.load(open(scaler_path, 'rb'))
 
-X_today = data
-
-
-X_today = loaded_scaler.transform(X_today)
-
-for i,game in enumerate(X_today):
-    prediction = loaded_model.predict([game])[0]
-    
-    print("Game: ", matchups[i])
-    print("Winner: ",matchups[i][prediction])
-
-
-
+X_today = loaded_scaler.transform(X)
 
 
 def spread2ML(spread):
@@ -251,18 +242,20 @@ def spread2ML(spread):
     
     return ML
 
-
 f = open("output.txt", "a")
-spreads = data[:,-1]
-for i,game in enumerate(X_today):
-    prediction = loaded_model.predict([game])[0]
-    
 
-    f.write("Game: " + str(matchups[i][0]) + ' @ ' + str(matchups[i][1])+'\n')
-    f.write("Predicted Winner: " + str(matchups[i][prediction])+'\n')
-    f.write("Home Team Spread: " + str(matchups[i][1]) + str(spreads[i])+'\n')
-    f.write("Approximate Moneyline Odds: " + str(matchups[i][0])+str(spread2ML(-spreads[i]))+" "+str(matchups[i][1])+str(spread2ML(spreads[i]))+'\n')
-    #f.write()
+for i,game in enumerate(X_today):
+    f.write("Game: " + road_teams[i] +' @ ' + home_teams[i])
+
+    prediction = loaded_model.predict([game])
+    if prediction == 0:
+        
+        f.write("Predicted winner is " + road_teams[i])
+    else: 
+        f.write("Predicted winner is " + home_teams[i])
+
+   # print("Game: ", matchups[i][0], ' @ ', matchups[i][0])
+    f.write("Home Team Spread: " + str(X[i][-1]))
+    #print("Approximate Moneyline Odds: ",matchups[i][0],spread2ML(-spreads[i]),matchups[i][1],spread2ML(spreads[i]))
 
 f.close()
-

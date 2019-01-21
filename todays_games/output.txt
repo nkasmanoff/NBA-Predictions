@@ -52,3 +52,32 @@ MIL
 MIN
 NOP
 LAL
+
+12/6/2018
+----------
+Game: NYK @ BOS
+Predicted Winner: BOS
+Home Team Spread: BOS-13.5
+Approximate Moneyline Odds: NYK1776.93317669 BOS-2671.41055
+Game: PHX @ POR
+Predicted Winner: POR
+Home Team Spread: POR-13.0
+Approximate Moneyline Odds: PHX1553.26367222 POR-2353.18566648
+Game: HOU @ UTA
+Predicted Winner: HOU
+Home Team Spread: UTA-1.0
+Approximate Moneyline Odds: HOU-103.18447304 UTA-151.41760512
+
+
+1/21/2019
+----------
+
+1/21/2019
+----------
+
+1/21/2019
+----------
+Game: OKC @ NYKPredicted winner is OKC
+1/21/2019
+----------
+Game: OKC @ NYKPredicted winner is OKCHome Team Spread: 9.75Game: CHI @ CLEPredicted winner is CHIHome Team Spread: 2.5Game: DET @ WASPredicted winner is WASHome Team Spread: -5.75Game: DAL @ MILPredicted winner is MILHome Team Spread: -11.75Game: ORL @ ATLPredicted winner is ORLHome Team Spread: 0.25Game: SAC @ BRKPredicted winner is BRKHome Team Spread: -3.75Game: NOP @ MEMPredicted winner is MEMHome Team Spread: -3.0Game: MIA @ BOSPredicted winner is BOSHome Team Spread: -8.25Game: HOU @ PHIPredicted winner is PHIHome Team Spread: -4.5Game: POR @ UTAPredicted winner is UTAHome Team Spread: -5.25Game: GSW @ LALPredicted winner is GSWHome Team Spread: 12.5
