@@ -80,4 +80,51 @@ Approximate Moneyline Odds: HOU-103.18447304 UTA-151.41760512
 Game: OKC @ NYKPredicted winner is OKC
 1/21/2019
 ----------
-Game: OKC @ NYKPredicted winner is OKCHome Team Spread: 9.75Game: CHI @ CLEPredicted winner is CHIHome Team Spread: 2.5Game: DET @ WASPredicted winner is WASHome Team Spread: -5.75Game: DAL @ MILPredicted winner is MILHome Team Spread: -11.75Game: ORL @ ATLPredicted winner is ORLHome Team Spread: 0.25Game: SAC @ BRKPredicted winner is BRKHome Team Spread: -3.75Game: NOP @ MEMPredicted winner is MEMHome Team Spread: -3.0Game: MIA @ BOSPredicted winner is BOSHome Team Spread: -8.25Game: HOU @ PHIPredicted winner is PHIHome Team Spread: -4.5Game: POR @ UTAPredicted winner is UTAHome Team Spread: -5.25Game: GSW @ LALPredicted winner is GSWHome Team Spread: 12.5
+Game: OKC @ NYKPredicted winner is OKCHome Team Spread: 9.75 y
+Game: CHI @ CLEPredicted winner is CHIHome Team Spread: 2.5 y 
+Game: DET @ WASPredicted winner is WASHome Team Spread: -5.75 y 
+Game: DAL @ MILPredicted winner is MILHome Team Spread: -11.75 y
+Game: ORL @ ATLPredicted winner is ORLHome Team Spread: 0.25 y 
+Game: SAC @ BRKPredicted winner is BRKHome Team Spread: -3.75 y 
+Game: NOP @ MEMPredicted winner is MEMHome Team Spread: -3.0 n 
+Game: MIA @ BOSPredicted winner is BOSHome Team Spread: -8.25 y
+Game: HOU @ PHIPredicted winner is PHIHome Team Spread: -4.5 y
+Game: POR @ UTAPredicted winner is UTAHome Team Spread: -5.25 n 
+Game: GSW @ LALPredicted winner is GSWHome Team Spread: 12.5 y
+
+was 9 for 11
+
+
+1/22/2019
+----------
+Game: SAC @ TORPredicted winner is TORHome Team Spread: -11.0 y 
+Game:POR @ OKCPredicted winner is OKCHome Team Spread: -4.75 y 
+Game: LAC @ DALPredicted winner is DALHome Team Spread: -3.25y
+Game: MIN @ PHXPredicted winner is PHXHome Team Spread: 4.5 n 
+
+3 fir 4
+
+so far it's 12/14
+
+
+1/23/2019
+----------
+Game: TOR @ INDPredicted winner is INDHome Team Spread: -6.25 y
+Game: CLE @ BOSPredicted winner is BOSHome Team Spread: -15.5 y
+Game: ORL @ BRKPredicted winner is BRKHome Team Spread: -5.75 y
+Game: LAC @ MIAPredicted winner is MIAHome Team Spread: -5.5 n 
+Game: HOU @ NYKPredicted winner is HOUHome Team Spread: 8.25 y 
+Game: SAS @ PHIPredicted winner is PHIHome Team Spread: -3.5 y 
+Game: ATL @ CHIPredicted winner is CHIHome Team Spread: -1.75 n
+Game: CHA @ MEMPredicted winner is MEMHome Team Spread: -1.5  n 
+Game: DET @ NOPPredicted winner is NOPHome Team Spread: -4.25 n
+Game: DEN @ UTAPredicted winner is UTAHome Team Spread: -4.5 y 
+
+
+6-4 today, so still a work in progress!
+1/24/2019
+----------
+Game: GSW @ WASPredicted winner is GSWHome Team Spread: 10.25
+Game: NOP @ OKCPredicted winner is OKCHome Team Spread: -14.25
+Game: POR @ PHXPredicted winner is PORHome Team Spread: 9.0
+Game: MIN @ LALPredicted winner is LALHome Team Spread: -2.25
